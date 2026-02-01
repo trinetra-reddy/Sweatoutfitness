@@ -6,12 +6,12 @@ export function GalleryPage() {
   const [activeTab, setActiveTab] = useState('all');
 
   const images = [
-    { category: 'equipment', src: 'https://images.unsplash.com/photo-1676109829011-a9f0f3e40f00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjBlcXVpcG1lbnQlMjB3ZWlnaHRzfGVufDF8fHx8MTc2OTY5NTQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080' },
-    { category: 'classes', src: 'https://images.unsplash.com/photo-1584827386916-b5351d3ba34b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwZ3ltJTIwd29ya291dHxlbnwxfHx8fDE3Njk3NzcyNTN8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-    { category: 'classes', src: 'https://images.unsplash.com/photo-1625865020971-581242d0ead6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwZml0bmVzcyUyMGNsYXNzfGVufDF8fHx8MTc2OTc4NjU4MHww&ixlib=rb-4.1.0&q=80&w=1080' },
-    { category: 'training', src: 'https://images.unsplash.com/photo-1540205453279-389ebbc43b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJzb25hbCUyMHRyYWluZXIlMjBjb2FjaGluZ3xlbnwxfHx8fDE3Njk2ODgyNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-    { category: 'training', src: 'https://images.unsplash.com/photo-1639504031765-ca21aecb7252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9zc2ZpdCUyMHRyYWluaW5nfGVufDF8fHx8MTc2OTc4NjU4MHww&ixlib=rb-4.1.0&q=80&w=1080' },
-    { category: 'equipment', src: 'https://images.unsplash.com/photo-1583500178450-e59e4309b57d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJkaW8lMjBleGVyY2lzZXxlbnwxfHx8fDE3Njk3ODY1ODF8MA&ixlib=rb-4.1.0&q=80&w=1080' },
+    { category: 'classes', src: '/images/gallery/image1.webp', alt: 'Fitness Classes at SweatOut' },
+    { category: 'equipment', src: '/images/gallery/image2.webp', alt: 'SweatOut Gym Equipment' },
+    { category: 'equipment', src: '/images/gallery/image3.webp', alt: 'Modern Gym Equipment' },
+    { category: 'training', src: '/images/gallery/image4.webp', alt: 'Personal Training at SweatOut' },
+    { category: 'equipment', src: '/images/gallery/image5.webp', alt: 'Strength Training Equipment' },
+    { category: 'classes', src: '/images/gallery/image6.webp', alt: 'Group Training Session' },
   ];
 
   const filteredImages = activeTab === 'all' 
@@ -63,7 +63,7 @@ export function GalleryPage() {
               <div key={index} className="group cursor-pointer overflow-hidden rounded-lg shadow-lg">
                 <ImageWithFallback
                   src={image.src}
-                  alt={`Gallery image ${index + 1}`}
+                  alt={image.alt}
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
