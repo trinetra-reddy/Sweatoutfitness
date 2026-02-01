@@ -184,9 +184,16 @@
     line-height: 1.5;
   }
 
-  /* Hero Title Font - Bebas Neue for Hardcore Gym Aesthetic */
+  /* Logo Font - DCC-ASH for Brand Identity */
+  .logo-text {
+    font-family: 'DCC-ASH', 'Bebas Neue', sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Hero Title Font - DCC-ASH for Hardcore Gym Aesthetic */
   .hero-title {
-    font-family: 'Bebas Neue', 'DCC-ASH', sans-serif;
+    font-family: 'DCC-ASH', 'Bebas Neue', sans-serif;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }

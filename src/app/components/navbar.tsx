@@ -31,14 +31,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-4 group">
             <motion.div
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.3 }}
             >
-              <Dumbbell className="h-8 w-8 text-accent" />
+              <Dumbbell className="h-10 w-10 text-accent" />
             </motion.div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+            <span className="text-3xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent logo-text">
               SWEATOUT
             </span>
           </Link>
