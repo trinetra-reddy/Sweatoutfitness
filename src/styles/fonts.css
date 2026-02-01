@@ -1,0 +1,15 @@
+/* Bebas Neue - Perfect for Athletic/Gym Hero Titles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Backup: If you want to add DCC-ASH font later:
+   1. Place the DCC-Ash.otf file in /public/fonts/ folder
+   2. Uncomment and use the @font-face below:
+
+@font-face {
+  font-family: 'DCC-ASH';
+  src: url('/fonts/DCC-Ash.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
