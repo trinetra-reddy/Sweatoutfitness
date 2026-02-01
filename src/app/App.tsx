@@ -10,6 +10,7 @@ import { MembershipPage } from './pages/membership';
 import { GalleryPage } from './pages/gallery';
 import { TestimonialsPage } from './pages/testimonials';
 import { BlogPage } from './pages/blog';
+import { BlogDetailPage } from './pages/blog-detail';
 import { ContactPage } from './pages/contact';
 import { ShopPage } from './pages/shop';
 import { TermsPage } from './pages/terms';
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/terms" element={<TermsPage />} />

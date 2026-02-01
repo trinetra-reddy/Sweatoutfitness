@@ -70,14 +70,10 @@ export function TermsPage() {
               </p>
 
               <h2 className="text-3xl font-bold text-white mb-4 mt-8">8. Contact Us</h2>
-              <p className="text-gray-300 mb-2">
-                For questions about these terms, please contact us:
-              </p>
-              <p className="text-accent">
+              <p className="text-gray-300 leading-relaxed">
                 SweatOut Health & Fitness<br />
                 Anantapur, Srinagar Colony, Andhra Pradesh 515002<br />
-                Phone: +91 9885873976<br />
-                Email: hello@sweatout.com
+                Phone: +91 9885873976
               </p>
             </div>
           </Card>

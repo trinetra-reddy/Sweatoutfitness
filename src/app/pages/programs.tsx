@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { Card, CardContent, CardHeader } from '@/app/components/card';
 import { Button } from '@/app/components/button';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
+import { SEOHead } from '@/app/components/seo-head';
 import { Dumbbell, Heart, Users, Zap, Activity, Target, Clock, CheckCircle, Trophy } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
@@ -102,6 +103,12 @@ export function ProgramsPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Fitness Programs – Sweatout Health & Fitness Anantapur | Personal Training, HIIT, Yoga"
+        description="Explore fitness services at Sweatout Health & Fitness, Anantapur including personal training, strength & conditioning, yoga, Pilates, HIIT, and nutrition coaching."
+        keywords="strength training Anantapur, yoga classes Anantapur, personal training Anantapur, HIIT workouts Anantapur, fitness programs Srinagar Colony, bodybuilding gym Anantapur, functional training Anantapur"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">

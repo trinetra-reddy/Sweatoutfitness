@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader } from '@/app/components/card';
 import { Button } from '@/app/components/button';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
-import { Check, Sparkles, Crown, Zap } from 'lucide-react';
+import { SEOHead } from '@/app/components/seo-head';
+import { Check, Sparkles, Crown, Zap, User } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
@@ -49,7 +50,7 @@ export function MembershipPage() {
     {
       name: 'Pro',
       icon: Zap,
-      price: 4999,
+      price: 3999,
       period: 'month',
       popular: true,
       description: 'Most popular choice for serious fitness enthusiasts',
@@ -71,7 +72,7 @@ export function MembershipPage() {
     {
       name: 'Elite',
       icon: Crown,
-      price: 7999,
+      price: 4999,
       period: 'month',
       description: 'Premium experience with unlimited benefits',
       features: [
@@ -87,6 +88,29 @@ export function MembershipPage() {
         '24/7 gym access with key card',
         'Exclusive members lounge',
         'Free workout gear (quarterly)',
+      ],
+      notIncluded: [],
+    },
+    {
+      name: 'Personal Training',
+      icon: User,
+      price: 10000,
+      period: 'month',
+      premium: true,
+      description: 'Daily one-on-one training with dedicated expert trainer',
+      features: [
+        'Everything in Elite',
+        'Dedicated personal trainer daily',
+        'Customized workout programs',
+        'One-on-one training sessions every day',
+        'Advanced nutrition & meal planning',
+        'Weekly progress assessments',
+        'Body composition tracking',
+        'Personalized supplement guidance',
+        '24/7 trainer support via WhatsApp',
+        'Flexible training schedule',
+        'Priority equipment access',
+        'Exclusive transformation support',
       ],
       notIncluded: [],
     },
@@ -121,6 +145,12 @@ export function MembershipPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Membership Plans – Sweatout Health & Fitness Anantapur | Affordable Gym Memberships"
+        description="Affordable gym membership in Srinagar Colony, Anantapur. Choose from Starter, Pro, Elite plans or premium personal training packages starting at ₹2,499/month."
+        keywords="affordable gym membership Anantapur, gym plans Srinagar Colony, personal training packages Anantapur, fitness membership Anantapur, gym rates Andhra Pradesh"
+      />
+      
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -160,107 +190,307 @@ export function MembershipPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {plans.map((plan, index) => {
-              const IconComponent = plan.icon;
-              return (
-                <AnimatedCard key={index} delay={index * 0.2}>
-                  <motion.div
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="h-full"
-                  >
-                    <Card
-                      hover
-                      className={`relative bg-card/40 backdrop-blur-sm border ${
-                        plan.popular 
-                          ? 'border-accent border-2 shadow-2xl shadow-accent/20 bg-gradient-to-b from-accent/5 to-transparent' 
-                          : 'border-white/10'
-                      }`}
-                    >
-                      {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                          <span className="bg-gradient-to-r from-accent to-orange-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                            ⭐ MOST POPULAR
-                          </span>
+          {/* Main Plans - 3 Column Layout with Featured Pro */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Starter Plan */}
+            <AnimatedCard delay={0}>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card
+                  hover
+                  className="relative bg-card/40 backdrop-blur-sm border border-white/10 h-full"
+                >
+                  <CardHeader className="text-center pt-8 pb-6">
+                    <div className="mb-6 flex justify-center">
+                      <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                        <Sparkles className="h-10 w-10 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 text-white">Starter</h3>
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                      Perfect for beginners starting their fitness journey
+                    </p>
+                    <div className="mb-6">
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-xl text-gray-400">₹</span>
+                        <span className="text-5xl font-bold text-white">
+                          {plans[0].price.toLocaleString('en-IN')}
+                        </span>
+                      </div>
+                      <span className="text-muted-foreground text-sm mt-2 block">per month</span>
+                      <div className="text-xs text-gray-500 mt-2">+ GST (18%)</div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="px-6 pb-6">
+                    <div className="space-y-3 mb-6">
+                      {plans[0].features.map((feature, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Link to="/contact" className="block">
+                      <Button
+                        variant="outline"
+                        className="w-full border-white/20 hover:bg-white/5 text-white"
+                        size="lg"
+                      >
+                        Choose Plan
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatedCard>
+
+            {/* Pro Plan - Featured */}
+            <AnimatedCard delay={0.1}>
+              <motion.div
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card
+                  hover
+                  className="relative bg-gradient-to-b from-accent/10 via-card/40 to-card/40 backdrop-blur-sm border-2 border-accent shadow-2xl shadow-accent/30 h-full transform md:scale-105"
+                >
+                  {/* Popular Badge */}
+                  <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-gradient-to-r from-accent via-orange-500 to-accent bg-[length:200%_100%] animate-gradient text-white px-8 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-accent/50">
+                      ⭐ MOST POPULAR
+                    </span>
+                  </div>
+                  
+                  <CardHeader className="text-center pt-12 pb-6">
+                    <div className="mb-6 flex justify-center">
+                      <div className="p-5 rounded-2xl bg-gradient-to-br from-accent/30 to-orange-600/30 border-2 border-accent shadow-lg shadow-accent/30">
+                        <Zap className="h-12 w-12 text-accent" />
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-3 text-white">Pro</h3>
+                    <p className="text-gray-300 text-sm mb-8 leading-relaxed">
+                      Most popular choice for serious fitness enthusiasts
+                    </p>
+                    <div className="mb-6">
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-2xl text-accent">₹</span>
+                        <span className="text-6xl font-bold text-accent">
+                          {plans[1].price.toLocaleString('en-IN')}
+                        </span>
+                      </div>
+                      <span className="text-gray-300 text-base mt-2 block font-semibold">per month</span>
+                      <div className="text-xs text-gray-400 mt-2">+ GST (18%)</div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="px-8 pb-8">
+                    <div className="space-y-4 mb-8">
+                      {plans[1].features.map((feature, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="mt-0.5">
+                            <Check className="h-5 w-5 text-accent" />
+                          </div>
+                          <span className="text-gray-200 text-sm font-medium leading-relaxed">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Link to="/contact" className="block">
+                      <Button
+                        variant="primary"
+                        className="w-full bg-gradient-to-r from-accent to-orange-600 hover:from-accent/90 hover:to-orange-600/90 shadow-xl shadow-accent/40 font-bold text-base"
+                        size="lg"
+                      >
+                        Get Started Now →
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatedCard>
+
+            {/* Elite Plan */}
+            <AnimatedCard delay={0.2}>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card
+                  hover
+                  className="relative bg-card/40 backdrop-blur-sm border border-white/10 h-full"
+                >
+                  <CardHeader className="text-center pt-8 pb-6">
+                    <div className="mb-6 flex justify-center">
+                      <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                        <Crown className="h-10 w-10 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 text-white">Elite</h3>
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                      Premium experience with unlimited benefits
+                    </p>
+                    <div className="mb-6">
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-xl text-gray-400">₹</span>
+                        <span className="text-5xl font-bold text-white">
+                          {plans[2].price.toLocaleString('en-IN')}
+                        </span>
+                      </div>
+                      <span className="text-muted-foreground text-sm mt-2 block">per month</span>
+                      <div className="text-xs text-gray-500 mt-2">+ GST (18%)</div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="px-6 pb-6">
+                    <div className="space-y-3 mb-6">
+                      {plans[2].features.slice(0, 8).map((feature, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                      {plans[2].features.length > 8 && (
+                        <div className="text-accent text-sm font-semibold pt-2">
+                          + {plans[2].features.length - 8} more features
                         </div>
                       )}
-                      
-                      <CardHeader className="text-center pt-12 pb-6">
-                        <div className="mb-6 flex justify-center">
-                          <div className={`p-5 rounded-2xl ${
-                            plan.popular 
-                              ? 'bg-gradient-to-br from-accent/20 to-orange-600/20 border-2 border-accent shadow-lg shadow-accent/20' 
-                              : 'bg-white/5 border border-white/10'
-                          }`}>
-                            <IconComponent className={`h-12 w-12 ${plan.popular ? 'text-accent' : 'text-white'}`} />
-                          </div>
-                        </div>
-                        <h3 className="text-3xl font-bold mb-3 text-white">{plan.name}</h3>
-                        <p className="text-gray-400 text-sm mb-8 leading-relaxed">{plan.description}</p>
-                        <div className="mb-6">
-                          <div className="flex items-baseline justify-center gap-1">
-                            <span className="text-2xl text-gray-400">₹</span>
-                            <span className={`text-6xl font-bold ${plan.popular ? 'text-accent' : 'text-white'}`}>
-                              {plan.price.toLocaleString('en-IN')}
-                            </span>
-                          </div>
-                          <span className="text-muted-foreground text-base mt-2 block">per {plan.period}</span>
-                          <div className="text-xs text-gray-500 mt-3">
-                            + GST (18% as applicable)
-                          </div>
-                        </div>
-                      </CardHeader>
+                    </div>
 
-                      <CardContent className="px-8 pb-8">
-                        <div className="space-y-4 mb-8 flex-1">
-                          {plan.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-start gap-3">
-                              <div className="mt-1 flex-shrink-0">
-                                <Check className="h-5 w-5 text-accent" />
-                              </div>
-                              <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
-                            </div>
-                          ))}
-                          {plan.notIncluded && plan.notIncluded.length > 0 && (
-                            <>
-                              <div className="border-t border-white/5 my-6" />
-                              {plan.notIncluded.map((feature, idx) => (
-                                <div key={idx} className="flex items-start gap-3 opacity-40">
-                                  <div className="mt-1 flex-shrink-0">
-                                    <Check className="h-5 w-5 text-muted-foreground" />
-                                  </div>
-                                  <span className="text-muted-foreground text-sm line-through">{feature}</span>
-                                </div>
-                              ))}
-                            </>
-                          )}
-                        </div>
-
-                        <Link to="/contact" className="block">
-                          <Button
-                            variant={plan.popular ? 'primary' : 'outline'}
-                            className={`w-full font-bold text-base ${
-                              plan.popular 
-                                ? 'bg-gradient-to-r from-accent to-orange-600 hover:from-accent/90 hover:to-orange-600/90 shadow-lg shadow-accent/30' 
-                                : 'border-white/20 hover:bg-white/5 text-white'
-                            }`}
-                            size="lg"
-                          >
-                            {plan.popular ? 'Get Started Now →' : 'Choose Plan'}
-                          </Button>
-                        </Link>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </AnimatedCard>
-              );
-            })}
+                    <Link to="/contact" className="block">
+                      <Button
+                        variant="outline"
+                        className="w-full border-white/20 hover:bg-white/5 text-white"
+                        size="lg"
+                      >
+                        Choose Plan
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatedCard>
           </div>
+
+          {/* Personal Training - Premium Showcase Section */}
+          <AnimatedCard delay={0.4}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ scale: 1.01 }}
+              className="relative pt-8"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 blur-3xl" />
+              
+              {/* Premium Badge - Outside Card */}
+              <div className="relative z-20 flex justify-center mb-4">
+                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-[length:200%_100%] animate-gradient text-white px-10 py-3 rounded-full text-base font-bold shadow-xl shadow-purple-500/50">
+                  👑 PREMIUM EXCLUSIVE
+                </span>
+              </div>
+              
+              <Card className="relative overflow-hidden bg-gradient-to-br from-purple-900/30 via-card/40 to-pink-900/30 backdrop-blur-xl border-2 border-purple-500/50 shadow-2xl shadow-purple-500/30">
+                <div className="grid md:grid-cols-2 gap-12 p-12">
+                  {/* Left: Info */}
+                  <div className="space-y-6">
+                    <div className="inline-flex items-center justify-center p-6 rounded-3xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400 shadow-lg shadow-purple-500/30">
+                      <User className="h-16 w-16 text-purple-300" />
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-4xl font-bold mb-3 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+                        Personal Training
+                      </h3>
+                      <p className="text-xl text-gray-300 leading-relaxed">
+                        Daily one-on-one training with your dedicated expert trainer
+                      </p>
+                    </div>
+
+                    <div className="pt-4">
+                      <div className="flex items-baseline gap-2 mb-2">
+                        <span className="text-3xl text-purple-400">₹</span>
+                        <span className="text-7xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+                          {plans[3].price.toLocaleString('en-IN')}
+                        </span>
+                      </div>
+                      <span className="text-gray-300 text-lg font-semibold">per month</span>
+                      <div className="text-sm text-gray-400 mt-1">+ GST (18%)</div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Link to="/contact" className="block">
+                        <Button
+                          variant="primary"
+                          className="w-full md:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-2xl shadow-purple-500/50 font-bold text-lg px-12 py-7"
+                          size="lg"
+                        >
+                          Start Your Transformation →
+                        </Button>
+                      </Link>
+                      <p className="text-sm text-gray-400 mt-4">
+                        ⚡ Limited slots available - Book your consultation today
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right: Features */}
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                      <span className="w-1 h-6 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full" />
+                      Everything in Elite, plus:
+                    </h4>
+                    
+                    <div className="grid gap-4">
+                      {[
+                        'Dedicated personal trainer - Daily sessions',
+                        'Customized workout programs tailored to you',
+                        'One-on-one training every single day',
+                        'Advanced nutrition & meal planning',
+                        'Weekly progress assessments & tracking',
+                        'Body composition analysis & monitoring',
+                        'Personalized supplement guidance',
+                        '24/7 trainer support via WhatsApp',
+                      ].map((feature, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: idx * 0.05 }}
+                          className="flex items-start gap-3 bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all"
+                        >
+                          <div className="mt-0.5">
+                            <Check className="h-5 w-5 text-purple-400" />
+                          </div>
+                          <span className="text-gray-200 text-sm font-medium leading-relaxed">{feature}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div className="pt-4 px-4">
+                      <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl p-4">
+                        <p className="text-sm text-purple-200 font-semibold">
+                          💎 Perfect for serious athletes and professionals who want guaranteed results with expert daily guidance
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </AnimatedCard>
 
           {/* Payment Info */}
           <AnimatedCard delay={0.6}>
-            <div className="mt-20 text-center">
+            <div className="mt-16 text-center">
               <p className="text-gray-400 mb-4 text-base">
                 💳 We accept all major payment methods including UPI, Cards, and Net Banking
               </p>
@@ -344,19 +574,21 @@ export function MembershipPage() {
                     <th className="text-center p-6 text-white font-bold text-lg">Starter</th>
                     <th className="text-center p-6 text-accent font-bold text-lg">Pro ⭐</th>
                     <th className="text-center p-6 text-white font-bold text-lg">Elite</th>
+                    <th className="text-center p-6 text-purple-400 font-bold text-lg">Personal 👑</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { name: 'Gym Floor Access', basic: true, pro: true, elite: true },
-                    { name: 'Cardio & Strength Equipment', basic: true, pro: true, elite: true },
-                    { name: 'Group Fitness Classes', basic: false, pro: 'Unlimited', elite: 'Unlimited' },
-                    { name: 'Personal Training', basic: false, pro: '2/month', elite: '4/month' },
-                    { name: 'Nutrition Coaching', basic: false, pro: 'Basic', elite: 'Advanced' },
-                    { name: 'Steam & Sauna', basic: false, pro: true, elite: true },
-                    { name: 'Body Composition Analysis', basic: false, pro: false, elite: true },
-                    { name: '24/7 Access', basic: false, pro: false, elite: true },
-                    { name: 'Guest Passes', basic: false, pro: '2/month', elite: 'Unlimited' },
+                    { name: 'Gym Floor Access', basic: true, pro: true, elite: true, personal: true },
+                    { name: 'Cardio & Strength Equipment', basic: true, pro: true, elite: true, personal: true },
+                    { name: 'Group Fitness Classes', basic: false, pro: 'Unlimited', elite: 'Unlimited', personal: 'Unlimited' },
+                    { name: 'Personal Training', basic: false, pro: '2/month', elite: '4/month', personal: 'Daily' },
+                    { name: 'Nutrition Coaching', basic: false, pro: 'Basic', elite: 'Advanced', personal: 'Premium' },
+                    { name: 'Steam & Sauna', basic: false, pro: true, elite: true, personal: true },
+                    { name: 'Body Composition Analysis', basic: false, pro: false, elite: true, personal: 'Weekly' },
+                    { name: '24/7 Access', basic: false, pro: false, elite: true, personal: true },
+                    { name: 'Guest Passes', basic: false, pro: '2/month', elite: 'Unlimited', personal: 'Unlimited' },
+                    { name: 'Dedicated Trainer', basic: false, pro: false, elite: false, personal: true },
                   ].map((row, idx) => (
                     <tr key={idx} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                       <td className="p-6 text-gray-300">{row.name}</td>
@@ -385,6 +617,15 @@ export function MembershipPage() {
                           <span className="text-gray-600">—</span>
                         ) : (
                           <span className="text-gray-300">{row.elite}</span>
+                        )}
+                      </td>
+                      <td className="text-center p-6 bg-purple-500/5">
+                        {row.personal === true ? (
+                          <Check className="h-5 w-5 text-purple-400 mx-auto" />
+                        ) : row.personal === false ? (
+                          <span className="text-gray-600">—</span>
+                        ) : (
+                          <span className="text-purple-400 font-semibold">{row.personal}</span>
                         )}
                       </td>
                     </tr>

@@ -35,7 +35,7 @@ export function Footer() {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                href="https://instagram.com"
+                href="https://www.instagram.com/sweatout_team_rz?igsh=MWZwdnY5ZXMyYW9tZg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors"
@@ -138,28 +138,24 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                 <span className="text-gray-400 leading-relaxed">
-                  SweatOut Health & Fitness<br />
-                  Anantapur, Srinagar Colony,<br />
+                  <strong className="text-white">Sweatout Health & Fitness</strong><br />
+                  Srinagar Colony, Anantapur,<br />
                   Andhra Pradesh 515002
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent flex-shrink-0" />
                 <a href="tel:+919885873976" className="text-gray-400 hover:text-accent transition-colors">
-                  +91 9885873976
-                </a>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <a href="mailto:hello@sweatout.com" className="text-gray-400 hover:text-accent transition-colors">
-                  hello@sweatout.com
+                  +91 98858 73976
                 </a>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-card/30 border border-white/10 rounded-lg">
-              <p className="text-sm font-semibold text-accent mb-2">Facility Hours:</p>
-              <p className="text-gray-400 text-sm">Mon-Sun: 5:00 AM - 11:00 PM</p>
-              <p className="text-gray-500 text-xs mt-1">24/7 Access for Premium Members</p>
+            
+            {/* Local Business Keywords */}
+            <div className="mt-8 p-4 bg-accent/5 rounded-lg border border-accent/10">
+              <p className="text-xs text-gray-500 leading-relaxed">
+                🏋️‍♂️ <strong className="text-accent">Best Gym in Anantapur</strong> with Personal Training & Fitness Programs
+              </p>
             </div>
           </div>
         </div>

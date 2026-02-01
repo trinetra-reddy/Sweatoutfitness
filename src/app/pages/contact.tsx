@@ -16,8 +16,18 @@ export function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // WhatsApp integration
-    const message = `Hi, I'm ${formData.name}. ${formData.message}`;
+    
+    // Format all form details for WhatsApp
+    const message = `🏋️ *New Contact Form Submission*
+
+👤 *Name:* ${formData.name}
+📱 *Phone:* ${formData.phone}
+📧 *Email:* ${formData.email}
+🎯 *Inquiry Type:* ${formData.goal}
+
+💬 *Message:*
+${formData.message}`;
+    
     const whatsappUrl = `https://wa.me/919885873976?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
@@ -67,7 +77,7 @@ export function ContactPage() {
       {/* Quick Contact Cards */}
       <section className="py-16 bg-gradient-to-b from-black to-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 -mt-32 relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 -mt-32 relative z-10">
             <motion.a
               href="tel:+919885873976"
               whileHover={{ y: -5 }}
@@ -92,31 +102,14 @@ export function ContactPage() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="bg-gradient-to-br from-green-600/20 to-green-800/20 backdrop-blur-sm border-green-500/30 hover:border-green-500 transition-all">
-                <CardContent className="pt-8 p-8 text-center">
-                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/30">
-                    <MessageCircle className="h-8 w-8 text-green-500" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-white">WhatsApp</h3>
-                  <p className="text-green-400 font-semibold text-lg">Chat with Us</p>
-                  <p className="text-gray-400 text-sm mt-2">Quick responses 24/7</p>
-                </CardContent>
-              </Card>
-            </motion.a>
-
-            <motion.a
-              href="mailto:hello@sweatout.com"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
               <Card className="bg-card/80 backdrop-blur-sm border-white/10 hover:border-accent transition-all">
                 <CardContent className="pt-8 p-8 text-center">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-accent/20">
-                    <Mail className="h-8 w-8 text-accent" />
+                    <Phone className="h-8 w-8 text-accent" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-white">Email Us</h3>
-                  <p className="text-accent font-semibold text-lg">hello@sweatout.com</p>
-                  <p className="text-gray-400 text-sm mt-2">We reply within 24 hours</p>
+                  <h3 className="text-xl font-bold mb-2 text-white">WhatsApp</h3>
+                  <p className="text-accent font-semibold text-lg">+91 9885873976</p>
+                  <p className="text-gray-400 text-sm mt-2">Quick response on WhatsApp</p>
                 </CardContent>
               </Card>
             </motion.a>
@@ -154,7 +147,7 @@ export function ContactPage() {
                         India
                       </p>
                       <a 
-                        href="https://maps.google.com/?q=Anantapur+Srinagar+Colony+Andhra+Pradesh"
+                        href="https://www.google.com/maps/dir//SWEATOUT+HEALTH+%26+FITNESS,+Anantapur,,+Srinagar+Colony,+Anantapur,+Andhra+Pradesh+515004/@14.6600224,77.5504773,5309m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3bb14aed3cb2bfbd:0x2e85882e9107f245!2m2!1d77.5859918!2d14.664012?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-accent hover:underline text-sm mt-2 inline-block"
@@ -173,8 +166,9 @@ export function ContactPage() {
                     <div>
                       <h3 className="font-bold mb-2 text-white text-lg">Facility Hours</h3>
                       <div className="text-gray-300 space-y-1">
-                        <p>Monday - Sunday: 5:00 AM - 11:00 PM</p>
-                        <p className="text-accent text-sm font-semibold">24/7 Access for Elite Members</p>
+                        <p>Mon-Sat: 5:00 AM - 11:00 PM</p>
+                        <p>Mon-Sat: 3:00 PM - 10:00 PM</p>
+                        <p>Sun: 6:00 AM - 10:00 AM</p>
                       </div>
                     </div>
                   </CardContent>
@@ -190,7 +184,7 @@ export function ContactPage() {
                 <div className="flex gap-4">
                   <motion.a
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/sweatout_team_rz?igsh=MWZwdnY5ZXMyYW9tZg=="
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/50 transition-all"
@@ -334,7 +328,7 @@ export function ContactPage() {
           >
             <div className="bg-muted/30 border border-white/10 h-96 rounded-2xl overflow-hidden relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.234!2d77.6!3d14.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzAwLjAiTiA3N8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.078!2d77.5859918!3d14.664012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14aed3cb2bfbd%3A0x2e85882e9107f245!2sSWEATOUT%20HEALTH%20%26%20FITNESS!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

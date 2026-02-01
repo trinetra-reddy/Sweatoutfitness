@@ -3,6 +3,7 @@ import { Button } from '@/app/components/button';
 import { Card, CardContent, CardHeader } from '@/app/components/card';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { Slider } from '@/app/components/slider';
+import { SEOHead } from '@/app/components/seo-head';
 import { Dumbbell, Users, Award, Clock, Target, Heart, Zap, Shield, Trophy, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
@@ -68,8 +69,8 @@ export function HomePage() {
     },
     {
       icon: Clock,
-      title: '24/7 Access',
-      description: 'Train on your schedule with round-the-clock facility access',
+      title: 'Flexible Hours',
+      description: 'Extended operating hours to fit your busy schedule',
     },
     {
       icon: Award,
@@ -95,37 +96,57 @@ export function HomePage() {
 
   const testimonials = [
     {
-      name: 'Arjun Sharma',
-      role: 'Member since 2022',
-      content: 'SweatOut has completely transformed my fitness journey. The trainers understand Indian body types and nutrition. Lost 18kg in 6 months!',
+      name: 'Pretty Browne',
+      role: 'Google Review',
+      content: 'Sweat Out is a great gym! The equipment is top-notch and well-maintained. Trainers are highly skilled and really know their stuff. If you\'re looking for good equipment and expert guidance, this is the place!',
       rating: 5,
       location: 'Anantapur'
     },
     {
-      name: 'Priya Reddy',
-      role: 'Member since 2021',
-      content: 'Best gym in Andhra Pradesh! The yoga and strength combination program is perfect. The community here is incredibly supportive and motivating.',
+      name: 'Kishore Madala',
+      role: 'Google Review',
+      content: 'Really happy to share the compliments that it\'s the best gym in the town with very good hospitality and care taken for each individual clients. I\'m proud to say that the personal trainer Bharath Yadav is very professional and very well trained to give the best out of it. Thanks to Sweatout gym for the support to achieve the personal goals on the body fitness. Happy to suggest the gym for any age person.',
       rating: 5,
       location: 'Anantapur'
     },
     {
-      name: 'Vikram Patel',
-      role: 'Member since 2023',
-      content: 'Premium equipment, expert guidance, and results that speak for themselves. Worth every rupee. This is not just a gym, it\'s a lifestyle.',
+      name: 'Javed Firdos',
+      role: 'Google Review',
+      content: 'I\'ve been training here for the past few months and the experience has been excellent. The gym has good equipment, is always clean, and the owner of gym Mr.Rajesh Anna is very motivating person and his diets which is perfect for both weight loss and build muscle. My trainers Bharath, Deepak, and Lokanath are very knowledgeable, supportive, and ensure I do every workout with the right form. I\'ve seen great results in my strength and fitness. Highly recommend this gym and trainer to anyone serious about fitness.',
       rating: 5,
-      location: 'Srinagar Colony'
+      location: 'Anantapur'
+    },
+    {
+      name: 'Sandhya Madupu',
+      role: 'Google Review',
+      content: 'Professional and intelligent trainers. It isn\'t just about lifting weights or burning calories—it\'s about changing your whole mindset. My trainer always says, fitness isn\'t only physical, it\'s a lifestyle shift. The vibe here makes you want to show up, stay consistent, and push yourself in the best way. A space that motivates you to grow inside and out.',
+      rating: 5,
+      location: 'Anantapur'
+    },
+    {
+      name: 'Ravimohan Reddy',
+      role: 'Google Review',
+      content: 'Trainers available are professional and friendly. In a month time you will be able to see difference in your body. The trainers and nutritionist are there to guide you with proper diet recommendations for weight loss as well as to build strength. Great ambience inside the gym. I believe it is best in the town!',
+      rating: 5,
+      location: 'Anantapur'
     },
   ];
 
   const stats = [
     { number: '5000+', label: 'Active Members' },
-    { number: '50+', label: 'Expert Trainers' },
+    { number: '20+', label: 'Expert Trainers' },
     { number: '100+', label: 'Weekly Classes' },
     { number: '15+', label: 'Years Experience' },
   ];
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Sweatout Health & Fitness – Best Gym in Anantapur | Personal Trainers & Workouts"
+        description="Join Sweatout Health & Fitness in Srinagar Colony, Anantapur – a top-rated gym offering strength training, personal coaching, Pilates, yoga, HIIT & tailored fitness programs with certified trainers."
+        keywords="gym in Anantapur, Sweatout Health & Fitness Anantapur, best gym in Srinagar Colony Anantapur, gym near Rangaswamy Nagar Anantapur, fitness center in Anantapur, personal trainer in Anantapur, strength training in Anantapur, yoga classes Anantapur, weight loss gym Anantapur, bodybuilding gym Anantapur, HIIT workouts Anantapur, certified trainers Anantapur"
+      />
+      
       {/* Hero Section - Premium with Parallax Effect */}
       <section className="relative h-screen flex items-center overflow-hidden">
         {/* Background Image with Overlay */}
@@ -157,16 +178,32 @@ export function HomePage() {
             </motion.div>
             
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ 
+                duration: 1, 
+                delay: 0.6,
+                type: "spring",
+                stiffness: 100
+              }}
               className="hero-title text-6xl md:text-8xl font-bold mb-6 leading-tight"
             >
-              <span className="text-white">UNLEASH</span>
-              <br />
-              <span className="bg-gradient-to-r from-accent to-orange-500 bg-clip-text text-transparent">
+              <motion.span 
+                className="text-white italic block"
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                UNLEASH
+              </motion.span>
+              <motion.span 
+                className="bg-gradient-to-r from-accent to-orange-500 bg-clip-text text-transparent italic block"
+                initial={{ x: 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
                 YOUR POWER
-              </span>
+              </motion.span>
             </motion.h1>
             
             <motion.p
@@ -186,17 +223,12 @@ export function HomePage() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link to="/membership">
-                <Button size="lg" variant="primary" className="text-lg px-8 py-6">
-                  Start Your Journey
-                </Button>
-              </Link>
-              <Link to="/contact">
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 hover:border-accent"
+                  variant="primary"
+                  className="text-lg px-8 py-6 bg-gradient-to-r from-accent to-orange-600 hover:from-accent/90 hover:to-orange-600/90"
                 >
-                  Book Free Trial
+                  Start Your Journey →
                 </Button>
               </Link>
             </motion.div>

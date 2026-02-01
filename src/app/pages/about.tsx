@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader } from '@/app/components/card';
 import { Button } from '@/app/components/button';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
+import { SEOHead } from '@/app/components/seo-head';
 import { Target, Users, Award, Heart, Zap, Shield, Trophy, TrendingUp, Map, Clock } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
@@ -69,13 +70,19 @@ export function AboutPage() {
 
   const achievements = [
     { icon: Trophy, number: '5000+', label: 'Active Members' },
-    { icon: Award, number: '50+', label: 'Certified Trainers' },
+    { icon: Award, number: '20+', label: 'Certified Trainers' },
     { icon: TrendingUp, number: '15+', label: 'Years of Excellence' },
     { icon: Shield, number: '100%', label: 'Safety Standards' },
   ];
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About Us – Sweatout Health & Fitness Anantapur | Our Story & Mission"
+        description="Sweatout Health & Fitness in Anantapur is a premier gym with expert trainers, modern equipment, and customized fitness programs for weight loss, muscle gain, and overall wellness."
+        keywords="about Sweatout gym Anantapur, fitness center Srinagar Colony, gym history Anantapur, certified trainers Anantapur, best gym in Andhra Pradesh"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">

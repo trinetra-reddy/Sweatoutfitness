@@ -1,5 +1,9 @@
+/* Hardcore Gym Font Pairing */
 /* Bebas Neue - Perfect for Athletic/Gym Hero Titles */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Poppins - Modern, highly readable body font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Backup: If you want to add DCC-ASH font later:
    1. Place the DCC-Ash.otf file in /public/fonts/ folder
