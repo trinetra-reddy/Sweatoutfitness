@@ -188,21 +188,21 @@ export function HomePage() {
               }}
               className="hero-title text-6xl md:text-8xl font-bold mb-6 leading-tight"
             >
-              <motion.span 
+              <motion.span
                 className="text-white italic block"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                UNLEASH
+                REDEFINE
               </motion.span>
-              <motion.span 
+              <motion.span
                 className="bg-gradient-to-r from-accent to-orange-500 bg-clip-text text-transparent italic block"
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                YOUR POWER
+                YOUR STRENGTH
               </motion.span>
             </motion.h1>
             

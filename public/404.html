@@ -3,85 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SweatOut Gym - Page Not Found</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        background: #0a0a0a;
-        color: #f5f5f5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-        padding: 20px;
-      }
-      .container {
-        max-width: 600px;
-      }
-      h1 {
-        font-size: 120px;
-        font-weight: bold;
-        background: linear-gradient(to right, #ffffff, #ff3b00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 20px;
-      }
-      h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: #ffffff;
-      }
-      p {
-        font-size: 18px;
-        color: #a1a1a1;
-        margin-bottom: 40px;
-        line-height: 1.6;
-      }
-      .btn {
-        display: inline-block;
-        padding: 16px 40px;
-        background: linear-gradient(to right, #ff3b00, #ff6b00);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 18px;
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(255, 59, 0, 0.3);
-      }
-      .icon {
-        font-size: 80px;
-        margin-bottom: 20px;
-      }
-    </style>
+    <title>SweatOut Gym - Redirecting...</title>
+
+    <!-- Single Page Apps for GitHub Pages -->
+    <!-- https://github.com/rafgraph/spa-github-pages -->
     <script>
-      // Redirect to home page for SPA routing
-      sessionStorage.redirect = location.href;
+      // This script takes the current URL and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new URL with only a query string and hash fragment.
+      // This is a widely-used solution for SPAs on GitHub Pages.
+
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+
+      // Store the path for the app to handle
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
   <body>
-    <div class="container">
-      <div class="icon">🏋️</div>
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <p>
-        The page you're looking for doesn't exist or has been moved.
-        <br />
-        Redirecting you to the homepage...
-      </p>
-      <a href="/" class="btn">Go to Homepage</a>
-    </div>
+    <!-- GitHub Pages SPA redirect in progress... -->
   </body>
 </html>
 
