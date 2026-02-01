@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Need guidance on your weight loss journey?</strong> Our trainers at SweatOut Gym in Anantapur will create a customized cardio and nutrition plan. Contact us at +91 9885873976!</p>
     `,
-    author: 'Rajesh',
+    author: 'Konanki Rajesh',
     authorRole: 'Head Strength Coach',
     date: 'January 22, 2026',
     category: 'Weight Loss',
@@ -293,7 +293,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Optimize your recovery</strong> with SweatOut Gym's steam room, sauna, and expert guidance. Visit us in Anantapur or call +91 9885873976!</p>
     `,
-    author: 'Rajesh',
+    author: 'Konanki Rajesh',
     authorRole: 'Head Strength Coach',
     date: 'January 12, 2026',
     category: 'Recovery',

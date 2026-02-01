@@ -112,7 +112,7 @@ export function HomePage() {
     {
       name: 'Javed Firdos',
       role: 'Google Review',
-      content: 'I\'ve been training here for the past few months and the experience has been excellent. The gym has good equipment, is always clean, and the owner of gym Mr.Rajesh Anna is very motivating person and his diets which is perfect for both weight loss and build muscle. My trainers Bharath, Deepak, and Lokanath are very knowledgeable, supportive, and ensure I do every workout with the right form. I\'ve seen great results in my strength and fitness. Highly recommend this gym and trainer to anyone serious about fitness.',
+      content: 'I\'ve been training here for the past few months and the experience has been excellent. The gym has good equipment, is always clean, and the owner of gym Mr. Konanki Rajesh Anna is very motivating person and his diets which is perfect for both weight loss and build muscle. My trainers Bala Barath, Dasari Deepak, and Lokanath are very knowledgeable, supportive, and ensure I do every workout with the right form. I\'ve seen great results in my strength and fitness. Highly recommend this gym and trainer to anyone serious about fitness.',
       rating: 5,
       location: 'Anantapur'
     },

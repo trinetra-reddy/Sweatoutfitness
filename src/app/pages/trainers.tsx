@@ -26,7 +26,7 @@ function AnimatedTrainerCard({ children, delay = 0 }: { children: React.ReactNod
 export function TrainersPage() {
   const trainers = [
     {
-      name: 'Rajesh',
+      name: 'Konanki Rajesh',
       role: 'Head Fitness Trainer',
       specialization: 'Strength Training • Fat Loss • Nutrition Coaching • Pilates',
       experience: '15+ years',
@@ -36,17 +36,7 @@ export function TrainersPage() {
       achievements: ['15+ years of professional coaching excellence', 'Helped 1000+ clients achieve sustainable fitness results'],
     },
     {
-      name: 'Prathap',
-      role: 'Senior Fitness Trainer',
-      specialization: 'General Fitness • Weight Training • Conditioning',
-      experience: '10+ years',
-      certifications: ['Diploma in Fitness – IGNOU'],
-      bio: 'Certified fitness professional with a diploma from IGNOU and over a decade of gym-floor experience. Known for structured programming, form correction, and building strong fitness foundations for long-term results.',
-      image: 'https://images.unsplash.com/photo-1549995546-87cb41aa98a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZml0bmVzcyUyMHRyYWluZXIlMjBjb2FjaGluZ3xlbnwxfHx8fDE3Njk5NTE5OTh8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      achievements: ['Extensive experience training beginners to advanced members', 'Strong expertise in gym-based strength and conditioning'],
-    },
-    {
-      name: 'Rajya Lakshmi',
+      name: 'Konanki Rajya Lakshmi',
       role: 'Fitness & Nutrition Coach',
       specialization: 'Weight Management • Women\'s Fitness • Nutrition Coaching',
       experience: '8+ years',
@@ -56,7 +46,7 @@ export function TrainersPage() {
       achievements: ['Expertise in women\'s fitness and weight management', 'Focus on long-term health and lifestyle transformation'],
     },
     {
-      name: 'Bala Bharath Yadav',
+      name: 'Bala Barath',
       role: 'Fitness Trainer',
       specialization: 'General Fitness • Strength Training • Conditioning',
       experience: '8+ years',
@@ -66,17 +56,7 @@ export function TrainersPage() {
       achievements: ['Experience training diverse fitness levels', 'Helps members build strength safely and effectively'],
     },
     {
-      name: 'Dev',
-      role: 'Senior Fitness & Wellness Trainer',
-      specialization: 'General Fitness • Weight Training • Yoga • Pilates',
-      experience: '10+ years',
-      certifications: ['Certified Fitness Trainer', 'Yoga & Pilates Training'],
-      bio: 'Versatile fitness professional with expertise across strength training, yoga, and Pilates. Known for blending flexibility, mobility, and strength to deliver balanced, functional fitness programs.',
-      image: 'https://images.unsplash.com/photo-1758875568932-0eefd3e60090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMG1hbGUlMjBwZXJzb25hbCUyMHRyYWluZXJ8ZW58MXx8fHwxNzY5OTI5ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      achievements: ['Combines strength training with mind-body disciplines', 'Ideal for clients seeking holistic fitness programs'],
-    },
-    {
-      name: 'Deepak Dasari',
+      name: 'Dasari Deepak',
       role: 'Fitness Trainer',
       specialization: 'General Fitness • Weight Training • Conditioning',
       experience: '8+ years',
@@ -84,6 +64,16 @@ export function TrainersPage() {
       bio: 'Dedicated fitness trainer with hands-on experience in gym training and conditioning programs. Focuses on form, progression, and helping members build a strong and fit physique safely.',
       image: 'https://images.unsplash.com/photo-1758875568932-0eefd3e60090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3ltJTIwaW5zdHJ1Y3RvciUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3Njk5NTE5OTh8MA&ixlib=rb-4.1.0&q=80&w=1080',
       achievements: ['Strong focus on correct form and injury prevention', 'Helps members improve strength and endurance consistently'],
+    },
+    {
+      name: 'Gurram Devendra',
+      role: 'Senior Fitness & Wellness Trainer',
+      specialization: 'General Fitness • Weight Training • Yoga • Pilates',
+      experience: '10+ years',
+      certifications: ['Certified Fitness Trainer', 'Yoga & Pilates Training'],
+      bio: 'Versatile fitness professional with expertise across strength training, yoga, and Pilates. Known for blending flexibility, mobility, and strength to deliver balanced, functional fitness programs.',
+      image: 'https://images.unsplash.com/photo-1758875568932-0eefd3e60090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMG1hbGUlMjBwZXJzb25hbCUyMHRyYWluZXJ8ZW58MXx8fHwxNzY5OTI5ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      achievements: ['Combines strength training with mind-body disciplines', 'Ideal for clients seeking holistic fitness programs'],
     },
   ];
 
@@ -134,7 +124,7 @@ export function TrainersPage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { number: '6', label: 'Expert Trainers', icon: Users },
+              { number: '5', label: 'Expert Trainers', icon: Users },
               { number: '50+', label: 'Years Combined Experience', icon: Award },
               { number: '5000+', label: 'Clients Trained', icon: Target },
               { number: '10+', label: 'Certifications', icon: Zap },
