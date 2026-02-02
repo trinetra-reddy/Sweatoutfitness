@@ -32,7 +32,7 @@ export function TrainersPage() {
       experience: '15+ years',
       certifications: ['ISSA Certified Fitness Trainer', 'INFS Certified Nutritionist', 'Pilates Trained'],
       bio: 'ISSA-certified fitness trainer and INFS-certified nutritionist with 15+ years of industry experience. Also trained in Pilates, helping clients improve core strength, posture, flexibility, and injury prevention alongside traditional strength training.',
-      image: 'https://images.unsplash.com/photo-1660463529569-17f8c4d16fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmaXRuZXNzJTIwY29hY2glMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY5Nzg3NjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/trainers/rajesh.jpg',
       achievements: ['15+ years of professional coaching excellence', 'Helped 1000+ clients achieve sustainable fitness results'],
     },
     {
@@ -52,7 +52,7 @@ export function TrainersPage() {
       experience: '8+ years',
       certifications: ['Certified Fitness Trainer'],
       bio: 'Experienced fitness professional with a strong background in gym training and member transformation. Focuses on building strength, endurance, and overall fitness through progressive training methods.',
-      image: 'https://images.unsplash.com/photo-1583500178689-665d1f77e67d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMGluZGlhbiUyMG1hbiUyMGd5bSUyMHdvcmtvdXR8ZW58MXx8fHwxNzY5Nzg3MzgyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/trainers/bharath.jpg',
       achievements: ['Experience training diverse fitness levels', 'Helps members build strength safely and effectively'],
     },
     {
@@ -62,7 +62,7 @@ export function TrainersPage() {
       experience: '8+ years',
       certifications: ['Certified Fitness Trainer'],
       bio: 'Dedicated fitness trainer with hands-on experience in gym training and conditioning programs. Focuses on form, progression, and helping members build a strong and fit physique safely.',
-      image: 'https://images.unsplash.com/photo-1758875568932-0eefd3e60090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3ltJTIwaW5zdHJ1Y3RvciUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3Njk5NTE5OTh8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/trainers/deepak.jpg',
       achievements: ['Strong focus on correct form and injury prevention', 'Helps members improve strength and endurance consistently'],
     },
     {

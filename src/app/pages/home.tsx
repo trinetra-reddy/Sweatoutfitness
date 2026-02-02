@@ -31,7 +31,7 @@ export function HomePage() {
       title: 'Strength Training',
       description: 'Build raw power and muscle mass with our cutting-edge strength programs designed for Indian athletes.',
       icon: Dumbbell,
-      image: 'https://images.unsplash.com/photo-1661439193765-392d81462003?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB3ZWlnaHRzJTIwZXF1aXBtZW50JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2OTc4NzM4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/programs/strength-training.jpg',
       duration: '45-60 min',
       level: 'All Levels'
     },
@@ -39,7 +39,7 @@ export function HomePage() {
       title: 'HIIT & Cardio',
       description: 'Torch calories and boost endurance with high-intensity interval training and advanced cardio circuits.',
       icon: Zap,
-      image: 'https://images.unsplash.com/photo-1583500178689-665d1f77e67d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMGluZGlhbiUyMG1hbiUyMGd5bSUyMHdvcmtvdXR8ZW58MXx8fHwxNzY5Nzg3MzgyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/programs/hitandcardio.jpg',
       duration: '30-45 min',
       level: 'Intermediate'
     },
@@ -47,7 +47,7 @@ export function HomePage() {
       title: 'Yoga & Wellness',
       description: 'Ancient Indian practices meet modern fitness. Find balance, flexibility, and mental clarity.',
       icon: Heart,
-      image: 'https://images.unsplash.com/photo-1767611120077-3697335ec748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwcGVhY2VmdWwlMjBtZWRpdGF0aW9ufGVufDF8fHx8MTc2OTc4NzM4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/programs/yoga.jpg',
       duration: '60-75 min',
       level: 'All Levels'
     },
@@ -55,7 +55,7 @@ export function HomePage() {
       title: 'Functional Training',
       description: 'Real-world strength and movement patterns for everyday life and athletic performance.',
       icon: Target,
-      image: 'https://images.unsplash.com/photo-1734188341701-5a0b7575efbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9zc2ZpdCUyMHRyYWluaW5nJTIwaW50ZW5zZSUyMHdvcmtvdXR8ZW58MXx8fHwxNzY5NzgwMjA0fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/programs/functional.jpg',
       duration: '50-60 min',
       level: 'Advanced'
     },
