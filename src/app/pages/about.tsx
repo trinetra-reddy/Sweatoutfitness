@@ -348,7 +348,7 @@ export function AboutPage() {
                       <h3 className="font-bold text-white mb-1">Address</h3>
                       <p className="text-gray-400">
                         SweatOut Health & Fitness<br />
-                        Anantapur, Srinagar Colony,<br />
+                        Srinagar Colony, Anantapur,<br />
                         Andhra Pradesh 515002
                       </p>
                     </div>

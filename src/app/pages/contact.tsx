@@ -142,7 +142,7 @@ ${formData.message}`;
                       <h3 className="font-bold mb-2 text-white text-lg">Our Location</h3>
                       <p className="text-gray-300 leading-relaxed">
                         <strong>SweatOut Health & Fitness</strong><br />
-                        Anantapur, Srinagar Colony,<br />
+                        Srinagar Colony, Anantapur,<br />
                         Andhra Pradesh 515002<br />
                         India
                       </p>
