@@ -60,6 +60,14 @@ export function PilatesPage() {
 
   const classTypes = [
     {
+      title: 'Beginner Pilates',
+      level: 'Beginner',
+      duration: '45 min',
+      description: 'Introduction to Pilates fundamentals with focus on proper form, breathing techniques, and basic movement patterns.',
+      benefits: ['Learn proper technique', 'Build confidence', 'Gentle introduction', 'Personalized attention'],
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWxhdGVzJTIwYmVnaW5uZXIlMjBjbGFzc3xlbnwwfHx8fDE3Mzg4NTI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      color: 'from-green-600 to-emerald-600'
+    },{
       title: 'Mat Pilates',
       level: 'All Levels',
       duration: '50-60 min',
@@ -77,15 +85,7 @@ export function PilatesPage() {
       image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWxhdGVzJTIwcmVmb3JtZXIlMjBtYWNoaW5lfGVufDB8fHx8MTczODg1MjgwMHww&ixlib=rb-4.1.0&q=80&w=1080',
       color: 'from-blue-600 to-cyan-600'
     },
-    {
-      title: 'Beginner Pilates',
-      level: 'Beginner',
-      duration: '45 min',
-      description: 'Introduction to Pilates fundamentals with focus on proper form, breathing techniques, and basic movement patterns.',
-      benefits: ['Learn proper technique', 'Build confidence', 'Gentle introduction', 'Personalized attention'],
-      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWxhdGVzJTIwYmVnaW5uZXIlMjBjbGFzc3xlbnwwfHx8fDE3Mzg4NTI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-green-600 to-emerald-600'
-    },
+    
     {
       title: 'Advanced Pilates',
       level: 'Advanced',
@@ -330,6 +330,14 @@ export function PilatesPage() {
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
+            {/* Section Heading - Shows on mobile */}
+            <div className="text-center mb-12 md:hidden">
+              <h2 className="hero-title text-4xl font-bold mb-2">
+                <span className="text-white">Expert </span>
+                <span className="text-accent">Pilates Instructor</span>
+              </h2>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <ImageWithFallback
@@ -337,18 +345,31 @@ export function PilatesPage() {
                   alt="Konanki Rajesh - Pilates Instructor"
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-accent text-black p-6 rounded-xl shadow-xl">
-                  <div className="text-3xl font-bold">15+</div>
-                  <div className="text-sm font-semibold">Years Experience</div>
+                <div className="absolute top-4 right-4 md:-bottom-6 md:-right-6 md:top-auto bg-accent text-black p-4 md:p-6 rounded-xl shadow-xl">
+                  <div className="text-2xl md:text-3xl font-bold">15+</div>
+                  <div className="text-xs md:text-sm font-semibold">Years Experience</div>
+                </div>
+
+                {/* Name and Title - Shows directly under image on mobile */}
+                <div className="mt-8 md:hidden text-center">
+                  <h3 className="text-2xl font-semibold text-white mb-2">Konanki Rajesh</h3>
+                  <p className="text-lg text-accent">Head Fitness Trainer • Pilates Trained</p>
                 </div>
               </div>
+
               <div>
-                <h2 className="hero-title text-4xl md:text-5xl font-bold mb-6">
+                {/* Section Heading - Shows on desktop only */}
+                <h2 className="hero-title text-4xl md:text-5xl font-bold mb-6 hidden md:block">
                   <span className="text-white">Expert </span>
-                  <span className="text-accent">Pilates Instruction</span>
+                  <span className="text-accent">Pilates Instructor</span>
                 </h2>
-                <h3 className="text-2xl font-semibold text-white mb-4">Konanki Rajesh</h3>
-                <p className="text-lg text-accent mb-6">Head Fitness Trainer • Pilates Trained</p>
+
+                {/* Name and Title - Shows on desktop only */}
+                <div className="hidden md:block">
+                  <h3 className="text-2xl font-semibold text-white mb-4">Konanki Rajesh</h3>
+                  <p className="text-lg text-accent mb-6">Head Fitness Trainer • Pilates Trained</p>
+                </div>
+
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                   ISSA-certified fitness trainer and INFS-certified nutritionist with 15+ years of industry experience. Trained in Pilates methodology, Rajesh specializes in helping clients improve core strength, posture, flexibility, and injury prevention.
                 </p>

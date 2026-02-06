@@ -10,13 +10,10 @@ export function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
-    { name: 'Pilates', path: '/pilates' },
     { name: 'Trainers', path: '/trainers' },
     { name: 'Membership', path: '/membership' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 

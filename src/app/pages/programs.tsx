@@ -35,10 +35,36 @@ export function ProgramsPage() {
       level: 'All Levels',
       icon: Dumbbell,
       image: 'https://images.unsplash.com/photo-1661439193765-392d81462003?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB3ZWlnaHRzJTIwZXF1aXBtZW50JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2OTc4NzM4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-red-600 to-orange-600'
+      color: 'from-red-600 to-orange-600',
+      link: '/strength'
+    },
+     {
+      id: 2,
+      title: 'Yoga & Mindfulness',
+      description: 'Traditional Indian yoga practices combined with modern wellness techniques. Achieve balance in body and mind.',
+      benefits: ['Enhanced flexibility', 'Stress relief', 'Better posture', 'Improved breathing', 'Mental clarity'],
+      duration: '6 weeks',
+      level: 'All Levels',
+      icon: Heart,
+      image: 'https://images.unsplash.com/photo-1767611120077-3697335ec748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwcGVhY2VmdWwlMjBtZWRpdGF0aW9ufGVufDF8fHx8MTc2OTc4NzM4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      color: 'from-purple-600 to-pink-600',
+      link: '/yoga'
     },
     {
-      id: 2,
+      id: 3,
+      title: 'Pilates',
+      description: 'Low-impact, high-results training focused on core strength, flexibility, and body awareness. Perfect for all fitness levels.',
+      benefits: ['Core strength', 'Improved posture', 'Flexibility', 'Injury prevention', 'Mind-body connection'],
+      duration: '8 weeks',
+      level: 'All Levels',
+      icon: Activity,
+      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWxhdGVzJTIwY2xhc3N8ZW58MHx8fHwxNzM4ODUyODAwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      color: 'from-accent to-orange-600',
+      link: '/pilates'
+    },
+    
+    {
+      id: 4,
       title: 'HIIT & Fat Loss',
       description: 'High-intensity interval training designed for maximum calorie burn and metabolism boost. Perfect for busy professionals.',
       benefits: ['Rapid fat loss', 'Improved cardiovascular health', 'Metabolic conditioning', 'Time-efficient workouts'],
@@ -46,21 +72,12 @@ export function ProgramsPage() {
       level: 'Intermediate',
       icon: Zap,
       image: 'https://images.unsplash.com/photo-1583500178689-665d1f77e67d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMGluZGlhbiUyMG1hbiUyMGd5bSUyMHdvcmtvdXR8ZW58MXx8fHwxNzY5Nzg3MzgyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-yellow-600 to-red-600'
+      color: 'from-yellow-600 to-red-600',
+      link: '/hiit'
     },
+   
     {
-      id: 3,
-      title: 'Yoga & Mindfulness',
-      description: 'Traditional Indian yoga practices combined with modern wellness techniques. Achieve balance in body and mind.',
-      benefits: ['Enhanced flexibility', 'Stress relief', 'Better posture', 'Improved breathing', 'Mental clarity'],
-      duration: '6 weeks',
-      level: 'All Levels',
-      icon: Activity,
-      image: 'https://images.unsplash.com/photo-1767611120077-3697335ec748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwcGVhY2VmdWwlMjBtZWRpdGF0aW9ufGVufDF8fHx8MTc2OTc4NzM4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-purple-600 to-pink-600'
-    },
-    {
-      id: 4,
+      id: 5,
       title: 'Functional Training',
       description: 'Real-world movement patterns that improve daily life performance. Includes CrossFit, TRX, and kettlebell training.',
       benefits: ['Full-body conditioning', 'Injury prevention', 'Athletic performance', 'Core strength', 'Mobility'],
@@ -68,10 +85,11 @@ export function ProgramsPage() {
       level: 'Intermediate-Advanced',
       icon: Target,
       image: 'https://images.unsplash.com/photo-1734188341701-5a0b7575efbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9zc2ZpdCUyMHRyYWluaW5nJTIwaW50ZW5zZSUyMHdvcmtvdXR8ZW58MXx8fHwxNzY5NzgwMjA0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-blue-600 to-cyan-600'
+      color: 'from-blue-600 to-cyan-600',
+      link: '/functional'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Group Fitness Classes',
       description: 'High-energy classes including Zumba, Spinning, Boot Camp, and Dance Fitness. Great for motivation and community.',
       benefits: ['Group motivation', 'Variety of workouts', 'Professional instruction', 'Social fitness experience'],
@@ -79,18 +97,20 @@ export function ProgramsPage() {
       level: 'All Levels',
       icon: Users,
       image: 'https://images.unsplash.com/photo-1536922246289-88c42f957773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJzb25hbCUyMHRyYWluZXIlMjBjb2FjaGluZyUyMGZpdG5lc3N8ZW58MXx8fHwxNzY5Njk0NjY3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-green-600 to-emerald-600'
+      color: 'from-green-600 to-emerald-600',
+      link: '/group-fitness'
     },
     {
-      id: 6,
+      id: 7,
       title: '1-on-1 Personal Training',
       description: 'Completely customized training with dedicated personal attention. Fastest path to your goals with accountability.',
       benefits: ['Customized programming', 'Form correction', 'Nutrition planning', 'Goal tracking', 'Maximum results'],
       duration: 'Flexible',
       level: 'All Levels',
-      icon: Heart,
+      icon: Zap,
       image: 'https://images.unsplash.com/photo-1727848480902-beb1959c06f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMHRyYWluZXIlMjBjb2FjaGluZyUyMGd5bXxlbnwxfHx8fDE3Njk3ODc2NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      color: 'from-pink-600 to-rose-600'
+      color: 'from-pink-600 to-rose-600',
+      link: '/personal-training'
     },
   ];
 
@@ -243,9 +263,9 @@ export function ProgramsPage() {
                           </ul>
                         </div>
 
-                        <Link to="/contact" className="block pt-4">
-                          <Button 
-                            variant="outline" 
+                        <Link to={program.link} className="block pt-4">
+                          <Button
+                            variant="outline"
                             className="w-full border-accent/30 hover:bg-accent hover:text-white font-semibold"
                             size="lg"
                           >

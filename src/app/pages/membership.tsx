@@ -118,28 +118,31 @@ export function MembershipPage() {
 
   const specialOffers = [
     {
-      title: 'Annual Membership',
-      subtitle: 'Save ₹6,000 - ₹12,000 yearly',
-      description: 'Get 2 months FREE when you pay annually. Best value for committed members.',
-      price: 'Starting ₹24,999/year',
-      badge: '20% OFF',
+      title: 'Pilates',
+      subtitle: 'Core Strength • Flexibility • Balance',
+      description: 'Expert-led Pilates classes for all levels. Build core strength, improve posture, and prevent injuries.',
+      price: 'Included in Pro & Elite',
+      badge: 'POPULAR',
       bgColor: 'from-accent to-orange-600',
+      link: '/pilates',
     },
     {
-      title: 'Student Discount',
-      subtitle: 'Special rates for students',
-      description: 'Valid student ID required. Perfect for college students and young professionals.',
-      price: '25% OFF all plans',
-      badge: 'STUDENT',
+      title: 'Yoga',
+      subtitle: 'Mind • Body • Spirit',
+      description: 'Transform your wellness with yoga. Reduce stress, increase flexibility, and find inner peace.',
+      price: 'Included in Pro & Elite',
+      badge: 'WELLNESS',
       bgColor: 'from-purple-600 to-pink-600',
+      link: '/yoga',
     },
     {
-      title: 'Corporate Wellness',
-      subtitle: 'For companies & teams',
-      description: 'Special corporate rates for teams of 10+. Boost employee health and productivity.',
-      price: 'Custom pricing',
-      badge: 'BULK',
+      title: 'Strength Training',
+      subtitle: 'Build • Transform • Dominate',
+      description: 'Build muscle, burn fat, and get stronger with expert strength training programs.',
+      price: 'All Membership Plans',
+      badge: 'RESULTS',
       bgColor: 'from-blue-600 to-cyan-600',
+      link: '/strength',
     },
   ];
 
@@ -535,13 +538,13 @@ export function MembershipPage() {
                       <p className="text-white/90 font-semibold mb-4">{offer.subtitle}</p>
                       <p className="text-white/80 mb-6 leading-relaxed">{offer.description}</p>
                       <div className="text-2xl font-bold mb-6">{offer.price}</div>
-                      <Link to="/contact">
-                        <Button 
-                          variant="secondary" 
-                          size="lg" 
+                      <Link to={offer.link}>
+                        <Button
+                          variant="secondary"
+                          size="lg"
                           className="w-full bg-white text-black hover:bg-white/90"
                         >
-                          Learn More
+                          View Program
                         </Button>
                       </Link>
                     </CardContent>
