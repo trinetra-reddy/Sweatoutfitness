@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Menu, X, Dumbbell } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './button';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -31,16 +31,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4 group">
-            <motion.div
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Dumbbell className="h-10 w-10 text-accent" />
-            </motion.div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent logo-text">
-              SWEATOUT
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img
+              src="/images/sweatout-logo.png"
+              alt="SweatOut Health & Fitness"
+              className="h-19 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

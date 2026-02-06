@@ -148,7 +148,7 @@ export function HomePage() {
       />
       
       {/* Hero Section - Premium with Parallax Effect */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-screen flex items-center overflow-hidden pt-20">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback

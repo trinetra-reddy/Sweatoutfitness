@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Dumbbell, Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function Footer() {
@@ -9,16 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div>
-            <Link to="/" className="flex items-center space-x-4 mb-6 group">
-              <motion.div
-                whileHover={{ rotate: 180 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Dumbbell className="h-10 w-10 text-accent" />
-              </motion.div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent logo-text">
-                SWEATOUT
-              </span>
+            <Link to="/" className="flex items-center mb-6 group">
+              <img
+                src="/images/sweatout-logo.png"
+                alt="SweatOut Health & Fitness"
+                className="h-19 w-auto"
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Anantapur's premier fitness destination. Transform your body, elevate your mind, achieve your potential.
