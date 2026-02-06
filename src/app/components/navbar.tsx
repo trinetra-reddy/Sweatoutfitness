@@ -12,6 +12,7 @@ export function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Programs', path: '/programs' },
+    { name: 'Pilates', path: '/pilates' },
     { name: 'Trainers', path: '/trainers' },
     { name: 'Membership', path: '/membership' },
     { name: 'Gallery', path: '/gallery' },

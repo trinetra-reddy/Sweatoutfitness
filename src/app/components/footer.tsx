@@ -165,13 +165,22 @@ export function Footer() {
               </p>
               <p className="text-gray-600 text-xs mt-1">
                 Developed by{' '}
-                <a 
-                  href="https://ananthadigital.com/" 
-                  target="_blank" 
+                <a
+                  href="https://ananthadigital.com/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent/80 transition-colors font-medium"
                 >
                   Anantha Web Solutions Pvt Ltd
+                </a>
+              </p>
+              <p className="text-gray-600 text-xs mt-1">
+                Software Development & Marketing Services:{' '}
+                <a
+                  href="tel:+919963789858"
+                  className="text-accent hover:text-accent/80 transition-colors font-medium"
+                >
+                  +91 99637 89858
                 </a>
               </p>
             </div>

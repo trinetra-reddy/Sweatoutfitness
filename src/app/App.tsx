@@ -5,6 +5,7 @@ import { WhatsAppButton } from './components/whatsapp-button';
 import { HomePage } from './pages/home';
 import { AboutPage } from './pages/about';
 import { ProgramsPage } from './pages/programs';
+import { PilatesPage } from './pages/pilates';
 import { TrainersPage } from './pages/trainers';
 import { MembershipPage } from './pages/membership';
 import { GalleryPage } from './pages/gallery';
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/programs" element={<ProgramsPage />} />
+            <Route path="/pilates" element={<PilatesPage />} />
             <Route path="/trainers" element={<TrainersPage />} />
             <Route path="/membership" element={<MembershipPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
