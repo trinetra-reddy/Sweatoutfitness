@@ -22,6 +22,12 @@ out/
 .env.production.local
 
 # =========================
+# Gym data (personal information - never commit)
+# =========================
+data/
+scripts/out/
+
+# =========================
 # Logs
 # =========================
 npm-debug.log*

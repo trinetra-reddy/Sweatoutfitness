@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from '@/app/components/card';
 import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
+import { submitWebsiteInquiry } from '@/admin/lib/public-inquiry';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,7 +17,13 @@ export function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+    // Save the lead to the gym admin (Supabase). Fire-and-forget: never block the WhatsApp hand-off.
+    void submitWebsiteInquiry({
+      name: formData.name, phone: formData.phone, email: formData.email,
+      interested_in: formData.goal, message: formData.message,
+    });
+
     // Format all form details for WhatsApp
     const message = `🏋️ *New Contact Form Submission*
 

@@ -23,10 +23,11 @@ import { ContactPage } from './pages/contact';
 import { ShopPage } from './pages/shop';
 import { TermsPage } from './pages/terms';
 import { PrivacyPage } from './pages/privacy';
+import { AdminApp } from '../admin/AdminApp';
 
-export default function App() {
+function PublicSite() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -57,6 +58,18 @@ export default function App() {
         <Footer />
         <WhatsAppButton />
       </div>
+    </>
+  );
+}
+
+// /admin/* is the gym management app (separate shell: no site navbar/footer).
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/admin/*" element={<AdminApp />} />
+        <Route path="*" element={<PublicSite />} />
+      </Routes>
     </BrowserRouter>
   );
 }
